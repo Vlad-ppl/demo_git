@@ -26,7 +26,7 @@ public class UserService {
 
     public UserEntity save(@NotNull UserDto userDto) {
         UserEntity userEntity = UserEntity.builder()
-                .name(userDto.getName())
+                .username(userDto.getUsername())
                 .build();
         return userRepository.save(userEntity);
     }
