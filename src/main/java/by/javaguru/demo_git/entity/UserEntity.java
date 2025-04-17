@@ -1,5 +1,6 @@
 package by.javaguru.demo_git.entity;
 
+import by.javaguru.demo_git.entity.role.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,4 +19,10 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+
+    @Column(name = "password")
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }
